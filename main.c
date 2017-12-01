@@ -111,11 +111,11 @@ void parse(char *expr) {
 				break;
 
 			default:
-				for (c = *expr++; c != '\0' && c != ' ' && c != '+' && c != '-' && c != '*' ; c = *expr++) {
+				//for (c = *expr++; c != '\0' && c != ' ' && c != '+' && c != '-' && c != '*' && c != '/'; c = *expr++) {
 					printf("%c", c);
-				}
-				printf(" ");
-				expr--;
+					printf(" ");
+				//}
+				//expr--;
 				break;
 		}
 	}
