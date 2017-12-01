@@ -95,8 +95,8 @@ void parse(char *expr) {
 				} else if (empty) {
 					empty = false;
 				} else if (op_weight(top(&op_stack)) >= op_weight(c)) {
-					printf(" ");
 					printf("%c", popoff(&op_stack));
+					printf(" ");
 				}
 
 				push(&op_stack, c);
@@ -105,8 +105,8 @@ void parse(char *expr) {
 			case ')':
 				; char z;// < why
 				while ((z = popoff(&op_stack)) != '(') {
-					printf(" ");
 					printf("%c", z);
+					printf(" ");
 				}
 				break;
 
