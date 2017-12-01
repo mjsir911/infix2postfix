@@ -138,12 +138,18 @@ void parse(char *expr) {
 // 		3 2 - 6 *
 
 
-#include <readline/readline.h>
-int main() {
-	char *cmd = NULL;
-	while ((cmd = readline("in2postfix: "))) {
-		parse(cmd);
-		printf("\n");
+#include <string.h>
+int main(int argc, char *argv[]) {
+
+	if (argc != 2) {
+		printf("wrong\n");
+		return 2;
 	}
+
+	char z[strlen(argv[1])];
+	strcpy(z, argv[1]);
+	parse(z);
+	printf("\n");
+
 	return 0;
 }
